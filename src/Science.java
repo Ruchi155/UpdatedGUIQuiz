@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,6 +14,7 @@ public class Science extends javax.swing.JFrame {
     /**
      * Creates new form Science
      */
+  
     public Science() {
         initComponents();
     }
@@ -38,7 +40,7 @@ public class Science extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 153, 51));
         jTextArea1.setRows(5);
-        jTextArea1.setText("Welcome to the Quiz!\nThere are 10 Question in total.\nThere are 4 options for each question but only one correct answer.\nyou have to answer 7 of them correctly to win the game.\nLet the game begin.");
+        jTextArea1.setText("Welcome to the Quiz!\nThere are 10 Question in total.\nThere are 4 options for each question but only one correct answer.\nIf you 1 incorrect answer then you loss the game.\nLet the game begin.");
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -87,7 +89,7 @@ public class Science extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Q1Sci  Q1=new Q1Sci();
+        Q1Sci_1  Q1=new Q1Sci_1();
         Q1.setVisible(true);
         this.dispose();
 

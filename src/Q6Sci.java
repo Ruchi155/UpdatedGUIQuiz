@@ -1,3 +1,6 @@
+
+import javax.swing.ButtonGroup;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,12 @@ public class Q6Sci extends javax.swing.JFrame {
      */
     public Q6Sci() {
         initComponents();
+        ButtonGroup j=new ButtonGroup();
+        j.add(A);
+        j.add(B);
+        j.add(C);
+        j.add(D);
+        
     }
 
     /**
@@ -195,9 +204,10 @@ public class Q6Sci extends javax.swing.JFrame {
         }
         if(B.isSelected()  ||  C.isSelected()  || D.isSelected())
         {
-            Q7Sci Q7=new Q7Sci();
-            Q7.setVisible(true);
-            this.dispose();
+
+              WrongQue w1=new WrongQue();
+                w1.setVisible(true);
+                 this.dispose();
         }
     }//GEN-LAST:event_NextActionPerformed
 

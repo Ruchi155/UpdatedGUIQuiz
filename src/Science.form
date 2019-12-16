@@ -74,7 +74,7 @@
               <Color blue="33" green="99" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Welcome to the Quiz!&#xa;There are 10 Question in total.&#xa;There are 4 options for each question but only one correct answer.&#xa;you have to answer 7 of them correctly to win the game.&#xa;Let the game begin."/>
+            <Property name="text" type="java.lang.String" value="Welcome to the Quiz!&#xa;There are 10 Question in total.&#xa;There are 4 options for each question but only one correct answer.&#xa;If you 1 incorrect answer then you loss the game.&#xa;Let the game begin."/>
           </Properties>
         </Component>
       </SubComponents>

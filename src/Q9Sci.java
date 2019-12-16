@@ -1,3 +1,6 @@
+
+import javax.swing.ButtonGroup;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,12 @@ public class Q9Sci extends javax.swing.JFrame {
      */
     public Q9Sci() {
         initComponents();
+        ButtonGroup j=new ButtonGroup();
+        j.add(A);
+        j.add(B);
+        j.add(C);
+        j.add(D);
+        
     }
 
     /**
@@ -213,9 +222,9 @@ public class Q9Sci extends javax.swing.JFrame {
         }
         if(A.isSelected()  ||  B.isSelected()  || D.isSelected())
         {
-            Q10Sci Q10=new Q10Sci();
-            Q10.setVisible(true);
-            this.dispose();
+              WrongQue w1=new WrongQue();
+                w1.setVisible(true);
+                this.dispose();
         }
     }//GEN-LAST:event_NextActionPerformed
 

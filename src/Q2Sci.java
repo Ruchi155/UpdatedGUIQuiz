@@ -1,3 +1,6 @@
+
+import javax.swing.ButtonGroup;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +20,14 @@ public class Q2Sci extends javax.swing.JFrame {
         initComponents();
         setSize(700,500);
         setResizable(false);
+        ButtonGroup j=new ButtonGroup();
+        j.add(A);
+        j.add(B);
+        j.add(C);
+        j.add(D);
+     
+        //points.setText(String.valueOf(Score));
+        
     }
 
     /**
@@ -36,6 +47,8 @@ public class Q2Sci extends javax.swing.JFrame {
         Previous = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        timer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +77,11 @@ public class Q2Sci extends javax.swing.JFrame {
         C.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         C.setForeground(new java.awt.Color(0, 102, 102));
         C.setText("C.Charcoal");
+        C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CActionPerformed(evt);
+            }
+        });
 
         D.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         D.setForeground(new java.awt.Color(0, 102, 102));
@@ -117,7 +135,12 @@ public class Q2Sci extends javax.swing.JFrame {
                                     .addComponent(D)
                                     .addComponent(C)))
                             .addComponent(Question)
-                            .addComponent(A)))
+                            .addComponent(A)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(366, 366, 366)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(timer, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(118, 118, 118)
                         .addComponent(Previous)
@@ -131,26 +154,27 @@ public class Q2Sci extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(timer, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(22, 22, 22)
                 .addComponent(Question)
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(A)
                     .addComponent(C))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(B))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(D)))
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(B)
+                    .addComponent(D))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Previous)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
         pack();
@@ -158,35 +182,44 @@ public class Q2Sci extends javax.swing.JFrame {
 
     private void AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AActionPerformed
         // TODO add your handling code here:
+        //points.getText();
+        //Score=Score+1;
+        //points.setText(String.valueOf(Score));
+            
     }//GEN-LAST:event_AActionPerformed
 
     private void DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DActionPerformed
         // TODO add your handling code here:
+        //points.setText(String.valueOf(Score));
     }//GEN-LAST:event_DActionPerformed
 
     private void BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BActionPerformed
         // TODO add your handling code here:
+        //points.setText(String.valueOf(Score));
     }//GEN-LAST:event_BActionPerformed
 
     private void PreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviousActionPerformed
         // TODO add your handling code here:
-       Q1Sci Q1 =new Q1Sci();
+        
+       Q1Sci_1 Q1 =new Q1Sci_1();
        Q1.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_PreviousActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+            //      points.getText();
+
         if(A.isSelected())
         {
-            Q3Sci Q3=new Q3Sci();
+           Q3Sci Q3=new Q3Sci();
             Q3.setVisible(true);
-            this.dispose();
+            this.dispose(); 
         }
         if(B.isSelected()  ||  C.isSelected()  || D.isSelected())
         {
-          Q3Sci Q3=new Q3Sci();
-            Q3.setVisible(true);
+            WrongQue w1=new WrongQue();
+             w1.setVisible(true);
             this.dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -197,6 +230,13 @@ public class Q2Sci extends javax.swing.JFrame {
         h.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CActionPerformed
+        // TODO add your handling code here:points.getText();
+        //points.setText(String.valueOf(Score));
+            //    points.setText(String.valueOf(Score));
+
+    }//GEN-LAST:event_CActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,6 +265,8 @@ public class Q2Sci extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        points.getText();
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -243,5 +285,7 @@ public class Q2Sci extends javax.swing.JFrame {
     private javax.swing.JLabel Question;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel timer;
     // End of variables declaration//GEN-END:variables
 }

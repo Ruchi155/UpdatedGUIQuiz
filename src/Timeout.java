@@ -8,14 +8,15 @@
  *
  * @author Ruchi Patel
  */
-public class Result extends javax.swing.JFrame {
-
+public class Timeout extends javax.swing.JFrame {
+static int Score;
     /**
-     * Creates new form Result
+     * Creates new form Timeout
      */
-    public Result() {
+    public Timeout() {
         initComponents();
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,69 +28,56 @@ public class Result extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        points = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Home = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruchi Patel\\Desktop\\happy.jpg")); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setText("Time Out!!");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 102, 51));
-        jLabel2.setText("You won the game!!!");
-
-        Home.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        Home.setForeground(new java.awt.Color(102, 0, 102));
-        Home.setText("Home");
-        Home.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeActionPerformed(evt);
-            }
-        });
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ruchi Patel\\Desktop\\sad.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2)
-                .addGap(38, 38, 38)
-                .addComponent(jLabel1)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(points)
+                .addContainerGap(108, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Home)
-                .addGap(71, 71, 71))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGap(73, 73, 73)))
-                .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(points)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
-        // TODO add your handling code here:
-        Home h=new Home();
-        h.setVisible(true);
-        this.dispose();
-        
-    }//GEN-LAST:event_HomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,27 +96,28 @@ public class Result extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Timeout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Timeout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Timeout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Result.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Timeout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Result().setVisible(true);
+                new Timeout().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel points;
     // End of variables declaration//GEN-END:variables
 }

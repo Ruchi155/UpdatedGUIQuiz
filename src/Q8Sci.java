@@ -1,3 +1,6 @@
+
+import javax.swing.ButtonGroup;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,12 @@ public class Q8Sci extends javax.swing.JFrame {
      */
     public Q8Sci() {
         initComponents();
+        ButtonGroup j=new ButtonGroup();
+        j.add(A);
+        j.add(B);
+        j.add(C);
+        j.add(D);
+        
     }
 
     /**
@@ -139,13 +148,10 @@ public class Q8Sci extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(A)
                     .addComponent(C))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(B))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(D)))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(B)
+                    .addComponent(D))
                 .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Previous)
@@ -191,9 +197,9 @@ public class Q8Sci extends javax.swing.JFrame {
         }
         if(A.isSelected()  ||  B.isSelected()  || D.isSelected())
         {
-            Q9Sci Q9=new Q9Sci();
-            Q9.setVisible(true);
-            this.dispose();
+              WrongQue w1=new WrongQue();
+                w1.setVisible(true);
+                this.dispose();
         }
     }//GEN-LAST:event_NextActionPerformed
 
